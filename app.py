@@ -12,7 +12,7 @@ app = Flask(__name__)
 app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024  # 16MB max upload
 
 # ── Load Model ───────────────────────────────────────────────
-MODEL_PATH = "breast_cancer_vgg16.keras"
+MODEL_PATH = "breast_cancer_vgg16.h5"
 model = tf.keras.models.load_model(MODEL_PATH)
 CATEGORIES = ["Benign", "Malignant"]
 IMG_SIZE   = (224, 224)
